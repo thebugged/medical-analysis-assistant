@@ -8,6 +8,6 @@ numpy==1.24.2
 tensorflow==2.15.0
 Pillow==9.4.0
 streamlit_option_menu==0.3.12
-splitfolders==0.5.1
+split-folders==0.5.1
 seaborn==0.12.2
 matplotlib==3.7.1
