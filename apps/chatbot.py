@@ -6,7 +6,7 @@ def chat_page():
     st.markdown("")
     st.caption("Go ahead, ask me anything!")
 
-    api_key = st.text_input("Enter your OpenAI GPT-3 API key:")
+    api_key = st.text_input("Enter your OpenAI API key to Continue:")
 
     if api_key:
         client = OpenAI(api_key=api_key)
