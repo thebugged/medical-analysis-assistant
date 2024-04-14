@@ -1,4 +1,3 @@
-# main.py
 import streamlit as st
 from PIL import Image
 
@@ -14,7 +13,7 @@ st.set_page_config(
     page_title="Healthy",
     page_icon="🧬",
     layout="wide",
-    initial_sidebar_state="auto",
+    initial_sidebar_state="collapsed",
   )
 
 pages = {
@@ -25,21 +24,39 @@ pages = {
     "Health Assistant": chat_page,
 }
 
+# For Horizontal Menu Layout
+selected_page = option_menu(
+        menu_title = None,
+        options = list(pages.keys()),
+        icons=['house', 'heart', 'lungs', 'person', 'robot'],
+        orientation="horizontal",
+    )
+
 with st.sidebar:
     col1, col2, col3 = st.columns((1, 4, 1))
     with col2:
         st.image(Image.open("healthy.png"), caption="Your Health, Our Priority")
     st.sidebar.markdown("---")
 
-    selected_page = option_menu(
-        None,
-        list(pages.keys()),
-        icons=['house', 'heart', 'lungs', 'person', 'robot'],
-        # orientation='horizontal',
-    )
+    st.sidebar.markdown("made by [thebugged](https://github.com/thebugged)")
 
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("made by [me](https://github.com/thebugged)")
+# # For Vertical Menu Layout
+# with st.sidebar:
+#     col1, col2, col3 = st.columns((1, 4, 1))
+#     with col2:
+#         st.image(Image.open("healthy.png"), caption="Your Health, Our Priority")
+#     st.sidebar.markdown("---")
+
+#     selected_page = option_menu(
+#         None,
+#         list(pages.keys()),
+#         icons=['house', 'heart', 'lungs', 'person', 'robot'],
+#         # orientation='horizontal',
+#     )
+
+#     st.sidebar.markdown("---")
+#     st.sidebar.markdown("made by [me](https://github.com/thebugged)")
+
 
 if selected_page in pages:
     pages[selected_page]()
