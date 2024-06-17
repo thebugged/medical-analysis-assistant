@@ -1,7 +1,7 @@
 <div align="center">
   <br />
-    <a href="https://medical-analysis-assistant.streamlit.app/" target="_blank">
-      <img src="medical.png" alt="Banner">
+    <a href="https://medical-analysis-assistant.streamlit.app" target="_blank">
+      <img src="https://github.com/thebugged/medical-analysis-assistant/assets/74977495/f2641a1b-c0fd-48f7-980b-aeced92d93d6" alt="Banner">
     </a>
   <br />
 
@@ -63,4 +63,4 @@ streamlit run main.py
 
 The application will be available in your browser at http://localhost:8501.
 
-
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://medical-analysis-assistant.streamlit.app)
