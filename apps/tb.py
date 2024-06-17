@@ -11,10 +11,9 @@ def tb_page():
     output_details_tb = interpreter_tb.get_output_details()
 
     st.subheader("Tuberculosis Detection", divider='grey')
-    st.markdown("")
-    st.caption("Upload a Chest X-ray Image")
+    st.caption("sample [image](https://www.kaggle.com/datasets/raddar/tuberculosis-chest-xrays-shenzhen)")
 
-    uploaded_file = st.file_uploader("Choose an image...", type=["png", "jpg", "jpeg"])
+    uploaded_file = st.file_uploader("Upload a Chest X-ray Image", type=["png", "jpg", "jpeg"])
 
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
@@ -30,9 +29,9 @@ def tb_page():
         class_index = np.argmax(predictions)
 
         if class_index == 1:
-            st.write("Tuberculosis Detected!")
+            st.success("Tuberculosis Detected!")
         else:
-            st.write("No Tuberculosis Detected.")
+            st.success("No Tuberculosis Detected.")
 
 if __name__ == "__main__":
     tb_page()

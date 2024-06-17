@@ -57,15 +57,15 @@ def heart_page():
         "thal": [thal]
     })
     
-    col1.markdown('')
-    if col1.button("Predict"):
+    st.markdown('')
+    if st.button("Predict"):
         prediction = model.predict(user_data)
 
         st.subheader("Prediction Result:")
         if prediction[0] == 1:
-            st.write("The model predicts that the person has a heart disease.")
+            st.write("The model predicts that the person likely has a heart disease.")
         else:
-            st.write("The model predicts that the person does not have a heart disease.")
+            st.write("The model predicts that the person likely does not have a heart disease.")
 
 if __name__ == "__main__":
     heart_page()

@@ -22,10 +22,9 @@ def skin_page():
     }
 
     st.subheader("Skin Cancer Classification", divider='grey')
-    st.markdown("")
-    st.caption("Upload a Dermatocopic Image of Skin Lesion")
+    st.caption("sample [image](https://www.kaggle.com/datasets/hasnainjaved/melanoma-skin-cancer-dataset-of-10000-images)")
 
-    uploaded_file = st.file_uploader("Choose an image...", type=["png", "jpg", "jpeg"])
+    uploaded_file = st.file_uploader("Upload a Dermatocopic Image of Skin Lesion", type=["png", "jpg", "jpeg"])
 
     if uploaded_file is not None:
         image = Image.open(uploaded_file)

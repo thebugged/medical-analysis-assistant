@@ -25,6 +25,7 @@ def home_page():
    
     
     st.subheader('What can you do?')
+    st.caption("access options from sidebar menu ↖️")
     st.markdown('''
             - Heart Disease Prediction: Assess the likelihood of heart disease.\n
             - Tuberculosis Detection: Identify potential signs of tuberculosis.\n
@@ -35,7 +36,7 @@ def home_page():
 
     st.markdown("")
     st.markdown("")
-   
+    st.divider()
     st.caption(
     "<span style='font-size: small;'>Note: This app is not a substitute for professional medical advice.</span>\n\n"
     "<span style='font-size: small;'>Always consult with a healthcare professional for accurate diagnosis and treatment.</span>",

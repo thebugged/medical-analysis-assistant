@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-    <a href="https://medical-analysis-assistant.streamlit.app" target="_blank">
+    <a href="https://medical-analysis-assistant.streamlit.app/" target="_blank">
       <img src="medical.png" alt="Banner">
     </a>
   <br />
