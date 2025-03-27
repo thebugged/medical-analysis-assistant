@@ -1,32 +1,33 @@
 import streamlit as st
-from openai import OpenAI
+import google.generativeai as genai
 
 def chat_page():
     st.subheader("Health Assistant", divider='grey')
-    st.caption("Access your API key from your [OpenAI account](https://platform.openai.com/api-keys)")
+    st.caption("Access your API key from your [Google AI Studio](https://makersuite.google.com/app/apikey)")
     st.markdown("")
     st.caption("Go ahead, ask me anything!")
 
-    api_key = st.text_input("Enter your OpenAI GPT-3 API key:", placeholder="sk-...e1D2")
+    api_key = st.text_input("Enter your Google AI (Gemini) API key:", placeholder="AIza...")
 
     if api_key:
-        client = OpenAI(api_key=api_key)
+        genai.configure(api_key=api_key)
+        
         user_input = st.text_input("Ask a health-related question:")
 
         if st.button("Get Answer"):
             try:
-                response = client.chat.completions.create(
-                    model="gpt-3.5-turbo",
-                    messages=[
-                        {"role": "system", "content": "You are a helpful health assistant."},
-                        {"role": "user", "content": user_input}
-                    ],
-                    max_tokens=150
-                )
-                st.text("Chatbot's Response:")
-                st.text(response.choices[0].message.content)
+                model = genai.GenerativeModel('gemini-1.5-flash')
+                
+                system_instruction = "You are a helpful health assistant."
+                
+                prompt = f"{system_instruction}\n\nUser question: {user_input}"
+                response = model.generate_content(prompt)
+                
+                st.subheader("Chatbot's Response:")
+                st.markdown(response.text) 
             except Exception as e:
                 st.error(f"An error occurred: {e}")
+                st.error("Please ensure you're using a valid Google AI API key.")
 
 if __name__ == "__main__":
     chat_page()
