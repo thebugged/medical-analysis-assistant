@@ -1,6 +1,5 @@
 keras==2.15.0
-streamlit==1.30.0
-openai==1.9.0  
+streamlit==1.30.0 
 pandas==2.1.1
 joblib==1.2.0
 scikit-learn==1.4.0
@@ -11,3 +10,4 @@ streamlit_option_menu==0.3.12
 split-folders==0.5.1
 seaborn==0.12.2
 matplotlib==3.7.1
+google-generativeai
