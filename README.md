@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="https://medical-analysis-assistant.streamlit.app" target="_blank">
-      <img src="https://github.com/thebugged/medical-analysis-assistant/assets/74977495/f2641a1b-c0fd-48f7-980b-aeced92d93d6" alt="Banner">
+      <img src="https://github.com/user-attachments/assets/093c1909-933f-4c7c-856d-78f8f7f7127b" alt="Banner">
     </a>
   <br />
 
