@@ -5,7 +5,7 @@ def chat_page():
     st.subheader("Health Assistant", divider='grey')
     st.caption("Access your API key from your [Google AI Studio](https://makersuite.google.com/app/apikey)")
     st.markdown("")
-    st.caption("Go ahead, ask me anything!")
+    st.caption("Go ahead, ask anything!")
 
     api_key = st.text_input("Enter your Google AI (Gemini) API key:", placeholder="AIza...")
 

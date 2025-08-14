@@ -1,4 +1,3 @@
-# skin.py
 import numpy as np
 import streamlit as st
 import tensorflow as tf
@@ -22,7 +21,7 @@ def skin_page():
     }
 
     st.subheader("Skin Cancer Classification", divider='grey')
-    st.caption("sample [image](https://www.kaggle.com/datasets/hasnainjaved/melanoma-skin-cancer-dataset-of-10000-images)")
+    st.caption("Sample [image](https://www.kaggle.com/datasets/hasnainjaved/melanoma-skin-cancer-dataset-of-10000-images)")
 
     uploaded_file = st.file_uploader("Upload a Dermatocopic Image of Skin Lesion", type=["png", "jpg", "jpeg"])
 

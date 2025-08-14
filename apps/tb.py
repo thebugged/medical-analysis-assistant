@@ -1,4 +1,3 @@
-# tb.py
 import numpy as np
 import tensorflow as tf
 import streamlit as st
@@ -14,7 +13,7 @@ def tb_page():
     expected_shape = input_details_tb[0]['shape']
     
     st.subheader("Tuberculosis Detection", divider='grey')
-    st.caption("sample [image](https://www.kaggle.com/datasets/raddar/tuberculosis-chest-xrays-shenzhen)")
+    st.caption("Sample [image](https://www.kaggle.com/datasets/raddar/tuberculosis-chest-xrays-shenzhen)")
     
     # Show expected input shape (helpful for debugging)
     # st.text(f"Model expects input shape: {expected_shape}")

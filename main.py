@@ -36,9 +36,7 @@ pages = {
 #     col1, col2, col3 = st.columns((1, 4, 1))
 #     with col2:
 #         st.image(Image.open("healthy.png"), caption="Your Health, Our Priority")
-#     st.sidebar.markdown("---")
 
-#     st.sidebar.markdown("made by [thebugged](https://github.com/thebugged)")
 
 # For Vertical Menu Layout
 with st.sidebar:
@@ -53,9 +51,6 @@ with st.sidebar:
         icons=['house', 'heart', 'lungs', 'person', 'robot'],
         orientation='vertical',
     )
-
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("👨🏾‍💻 by [thebugged](https://github.com/thebugged)")
 
 
 if selected_page in pages:

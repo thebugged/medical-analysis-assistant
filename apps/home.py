@@ -4,47 +4,54 @@ import streamlit as st
 def home_page():
     st.markdown(
     """
-    <div style='text-align: center;'>
+    <div style='text-align: left;'>
         <h1>Medical Analysis Assistant</h1>
     </div>
     """,
     unsafe_allow_html=True,
     )
     
-    st.markdown(
-    """
-    <div style='text-align: center; font-family: "Courier New", Courier, monospace;'>
-        Welcome to your one-stop solution for medical predictions and analysis.
-    </div>
-    """,unsafe_allow_html=True
-    )
-
-    st.markdown("---")
     st.markdown("")
-    st.markdown("")
-   
     
-    st.subheader('What can you do?')
-    st.caption("access options from sidebar menu ↖️")
-    st.markdown('''
-            - Heart Disease Prediction: Assess the likelihood of heart disease.\n
-            - Tuberculosis Detection: Identify potential signs of tuberculosis.\n
-            - Skin Cancer Classification: Evaluate skin conditions for possible cancer.\n
-            - Chat with a Health Assistant: Ask questions about health or use the chat for general assistance.
-    '''
+    # What is Medical Analysis section
+    st.markdown(
+        "Medical analysis involves the systematic examination of health data, symptoms, and diagnostic information to assess potential health conditions. "
+        "This application uses machine learning algorithms to provide preliminary assessments for various medical conditions. "
+        "These tools can help identify potential health risks and guide users toward appropriate medical consultation. "
+        "Early detection and analysis can significantly improve health outcomes and treatment effectiveness."
     )
+    
+    st.markdown("")
+    
+    # Main Features section
+    st.markdown("**Main Features**")
+    st.markdown(
+        "The features available in this application range from cardiovascular assessment to infectious disease detection. "
+        "Each tool is designed to analyze specific health indicators and provide meaningful insights based on established medical research."
+    )
+    st.caption("access options from sidebar menu ←")
+    
+    st.markdown("")
+    
+    # Feature list with descriptions
+    st.markdown("**1. Heart Disease Prediction** – Analyzes cardiovascular risk factors to assess the likelihood of heart disease based on clinical parameters.")
+    
+    st.markdown("**2. Tuberculosis Detection** – Uses chest X-ray analysis to identify potential signs of tuberculosis infection in lung tissues.")
+    
+    st.markdown("**3. Skin Cancer Classification** – Evaluates dermatological images to detect potential malignant skin lesions and classify cancer types.")
+    
+    st.markdown("**4. Health Assistant Chat** – Provides interactive consultation for general health questions and medical guidance.")
 
     st.markdown("")
     st.markdown("")
     st.divider()
+    
     st.caption(
-    "<span style='font-size: small;'>Note: This app is not a substitute for professional medical advice.</span>\n\n"
-    "<span style='font-size: small;'>Always consult with a healthcare professional for accurate diagnosis and treatment.</span>",
-    unsafe_allow_html=True
+        "<span style='font-size: small;'>Note: This application is designed for educational and screening purposes only.</span>\n\n"
+        "<span style='font-size: small;'>Always consult with qualified healthcare professionals for accurate diagnosis and treatment decisions.</span>",
+        unsafe_allow_html=True
     )
 
 
 if __name__ == "__main__":
     home_page()
-
-
